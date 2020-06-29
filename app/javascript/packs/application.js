@@ -8,8 +8,4 @@ require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
 
-// For hamburger menu dropdown action
-const changeBurger = () => {
-  document.querySelector(".hamburger").classList.toggle("switch-patties");
-  document.querySelector("header").classList.toggle("reveal");
-}
+// Puts hamburger action written in JS here.
