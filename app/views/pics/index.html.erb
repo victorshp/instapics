@@ -1,3 +1,7 @@
 <%= render "shared/navbar" %>
 
-<h1>Placeholder</h1>
+<% @pics.each do |pic| %>
+<h1><%= pic.title %></h1>
+<h2><%= pic.description %></h2>
+<hr>
+<% end %>
