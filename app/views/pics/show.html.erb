@@ -4,4 +4,8 @@
 <h1><%= @pic.description %></h1>
 
 <hr>
+<%= link_to "Edit", edit_pic_path %>
+<br>
+<%= link_to "Delete", pic_path, method: :delete, data: { confirm: "Permanently Delete this post?" } %>
+<br>
 <%= link_to "Back to Home", root_path %>

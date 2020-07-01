@@ -1,7 +1,6 @@
 <%= render "shared/navbar" %>
 
 <% @pics.each do |pic| %>
-<h1><%= pic.title %></h1>
-<h2><%= pic.description %></h2>
-<hr>
+  <h1><%= link_to pic.title, pic_path(pic) %></h1>
+  <hr>
 <% end %>

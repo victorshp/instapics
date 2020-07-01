@@ -1,0 +1,9 @@
+<h1>Edit Pic</h1>
+
+<%= simple_form_for (@pic) do |f| %>
+  <%= f.input :title, label: "Title" %>
+  <%= f.input :description, label: "Description" %>
+  <%= f.submit "Update", class:"btn btn-info" %>
+<% end %>
+
+<%= link_to "Cancel", root_path %>
