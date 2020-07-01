@@ -1,7 +1,8 @@
 <%= render "shared/navbar" %>
 
 <h1><%= @pic.title %></h1>
-<h1><%= @pic.description %></h1>
+<h2><%= @pic.description %></h2>
+<h4><%= @pic.user.email %></h4>
 
 <hr>
 <%= link_to "Edit", edit_pic_path %>
