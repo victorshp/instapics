@@ -9,7 +9,11 @@ class PicsController < ApplicationController
   end
 
   def new
-    @pic = current_user.pics.build
+    if user_signed_in?
+      @pic = current_user.pics.build
+    else
+      redirect_to new_user_session_path
+    end
   end
 
   def create
