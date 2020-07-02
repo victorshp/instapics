@@ -7,27 +7,30 @@
 
 <header>
   <div class="in-small">
-    <a href="/"><%= image_tag "instapics_logo_across.png", alt:"Instapics Logo", id:"logo-text" %></a>
+    <a href="/"><%= image_tag "instapics_logo_in_letters_white.png", alt:"Instapics Logo", id:"logo-text" %></a>
     <div class="hamburger" onclick="changeBurger()">
       <div class="bar1"></div>
       <div class="bar2"></div>
       <div class="bar3"></div>
     </div>
   </div>
+  <div class="search-bar"></div>
   <ul class="navbar-links">
-    <li><a href="/">Home</a></li>
-    <li><a href="/pics">Pictures</a></li>
-    <li><a href="/pics/new">Post</a></li>
-    <li class="dropdown">
-      <a class="dropdown-btn">Location</a>
-      <div class="dropdown-content">
-        <a href="#">New York</a>
-        <a href="#">Sao Paulo</a>
-        <a href="#">London</a>
-        <a href="#">Paris</a>
-        <a href="#">Seoul</a>
+    <li><a href="/"><i class="fas fa-home fa-lg"></i></a></li>
+    <li><a href="/pics/new"><i class="fas fa-camera fa-lg"></i></a></li>
+    <li><a href="/pics"><i class="far fa-heart fa-lg"></i></a></li>
+    <li><a href="#"><i class="fas fa-sms fa-lg"></i></a></li>
+    <% if user_signed_in? %>
+      <li class="dropdown">
+        <a class="dropdown-btn"><i class="fas fa-user-circle fa-lg" id="avatar-icon"></i></a>
+        <div class="dropdown-content">
+          <%= link_to "Profile", "/profile", class: "dropdown-item" %>
+          <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+        </div>
       </div>
-    </li>
+    <% else %>
+      <%= link_to "Enter", new_user_session_path, class: "login-btn btn btn-warning"%>
+    <% end %>
   </ul>
-  <a href="#" class="contact"><button>Contact</button></a>
 </header>
+

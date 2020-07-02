@@ -1,3 +1,8 @@
+.login-btn {
+  margin-left: 16px;
+}
+
+
 /* =============================== COMMENT START - Styles that override everything (CSS Reset to maintain style in different browsers) =============================== */
 * {
   box-sizing: border-box;
@@ -42,7 +47,7 @@ header a:first-child {
 
 .navbar-links li {
   display: inline-block;
-  padding: 0 20px;
+  padding: 0 16px;
 }
 
 h3 {
@@ -60,7 +65,7 @@ h3 {
 }
 /* ================================================= COMMENT END ================================================= */
 
-.contact button {
+.enter button {
   padding: 9px 25px;
   background-color: rgba(0, 136, 169, 1);
   border: none;
@@ -69,7 +74,7 @@ h3 {
   transition: all 0.3s ease 0s;
 }
 
-.contact button:hover {
+.enter button:hover {
   background-color: rgba(0, 136, 169, 0.8);  
 }
 
@@ -159,7 +164,7 @@ h3 {
     justify-content: space-between;
     align-items: center;
   }
-  header .navbar-links, header .contact {
+  header .navbar-links, header .enter {
     display: none;
   }
   header .hamburger {
@@ -179,7 +184,7 @@ h3 {
   header.reveal .dropdown-content a{
     padding: 15px 16px;
   }
-  header.reveal .contact {
+  header.reveal .enter {
     display: block;
     margin-top: 22px;
   }
