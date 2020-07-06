@@ -1,12 +1,32 @@
 <%= render "shared/navbar" %>
 
-<h1><%= @pic.title %></h1>
-<h2><%= @pic.description %></h2>
-<h4><%= @pic.user.email %></h4>
+<div class="container">
+  <div class="user-row">
+    <div class="only-user">
+      <i class="fas fa-user-circle fa-2x" id="user-avatar"></i>
+      <h5 id="user-name"><%= @pic.user.email %></h5>
+    </div>
+    <i class="fas fa-exclamation-circle fa-lg" id="unfollow-btn"></i>
+  </div>
 
-<hr>
-<%= link_to "Edit", edit_pic_path %>
-<br>
-<%= link_to "Delete", pic_path, method: :delete, data: { confirm: "Permanently delete this post?" } %>
-<br>
-<%= link_to "Back to Home", root_path %>
+  <%= cl_image_tag @pic.photo.key, width: 610, crop: :fill, class:"pic-row" %>
+
+  <div class="interaction-row">
+    <div class="interactive-clicks">
+      <i class="far fa-heart" id="interaction-heart"></i>
+      <i class="far fa-comments" id="interaction-comment"></i>
+    </div>
+    <div class="edit-clicks">
+      <% if current_user == @pic.user %>
+        <%= link_to pic_path, method: :delete, data: { confirm: "Permanently delete this post?" } do %>
+          <i class="fas fa-trash" id="edit-trash"></i>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="script-row">
+    <h2 id="script-title"><%= @pic.title %></h2>
+    <p id="script-description"><%= @pic.description %></p>
+  </div>
+</div>

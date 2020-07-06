@@ -1,0 +1,76 @@
+/* The whole post */
+.container {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  max-width: 640px;
+}
+
+/* Stylize all rows */
+.user-row, .interaction-row, .pic-row {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 0px 2px grey;
+}
+
+.script-row {
+  background-color: white;
+  box-shadow: 0px 0px 2px grey;
+}
+
+/* First row - the avatar, username and unfollow button */
+.user-row {
+  justify-content: space-between;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.only-user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#user-avatar, #user-name {
+  margin-left: 12px
+}
+
+#unfollow-btn {
+  margin-right: 12px;
+}
+
+/* Third row - the like and comment buttons and the amount of likes */
+
+.interaction-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#interaction-heart, #interaction-comment {
+  margin-top: 12px;
+  margin-bottom: 12px;
+  margin-left: 16px;
+  font-size: 2.25rem;
+}
+
+#edit-edit, #edit-trash {
+  margin-top: 12px;
+  margin-bottom: 12px;
+  margin-right: 16px;
+  font-size: 2rem;
+}
+
+/* Fourth row - the title and description */
+h2, p {
+  padding: 12px 12px 0 12px;
+  margin: 0 0 0 0;
+}
+
+#script-description {
+  padding-bottom: 12px;
+}
+
+/* Fifth row - three rows comments and who posted them + show more all comments button */
+
+/* Sixth row - add a new comment box */
