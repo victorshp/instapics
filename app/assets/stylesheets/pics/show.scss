@@ -42,6 +42,10 @@
 /* Third row - the like and comment buttons and the amount of likes */
 
 .interaction-row {
+  display: block;
+}
+
+.interaction-buttons {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -49,16 +53,20 @@
 
 #interaction-heart, #interaction-comment {
   margin-top: 12px;
-  margin-bottom: 12px;
+  margin-bottom: 4px;
   margin-left: 16px;
   font-size: 2.25rem;
 }
 
 #edit-edit, #edit-trash {
   margin-top: 12px;
-  margin-bottom: 12px;
+  margin-bottom: 4px;
   margin-right: 16px;
   font-size: 2rem;
+}
+
+#interaction-count {
+  padding-bottom: 12px;
 }
 
 /* Fourth row - the title and description */

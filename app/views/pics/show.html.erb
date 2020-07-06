@@ -10,18 +10,22 @@
   </div>
 
   <%= cl_image_tag @pic.photo.key, width: 610, crop: :fill, class:"pic-row" %>
-
   <div class="interaction-row">
-    <div class="interactive-clicks">
-      <i class="far fa-heart" id="interaction-heart"></i>
-      <i class="far fa-comments" id="interaction-comment"></i>
-    </div>
-    <div class="edit-clicks">
-      <% if current_user == @pic.user %>
-        <%= link_to pic_path, method: :delete, data: { confirm: "Permanently delete this post?" } do %>
-          <i class="fas fa-trash" id="edit-trash"></i>
+    <div class="interaction-buttons">
+      <div class="interactive-clicks">
+        <i class="far fa-heart" id="interaction-heart"></i>
+        <i class="far fa-comments" id="interaction-comment"></i>
+      </div>
+      <div class="edit-clicks">
+        <% if current_user == @pic.user %>
+          <%= link_to pic_path, method: :delete, data: { confirm: "Permanently delete this post?" } do %>
+            <i class="fas fa-trash" id="edit-trash"></i>
+          <% end %>
         <% end %>
-      <% end %>
+      </div>
+    </div>
+    <div id="interaction-count">
+      <p><strong>No likes or comments yet.</strong></p>
     </div>
   </div>
 
