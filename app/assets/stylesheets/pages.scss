@@ -1,0 +1,25 @@
+.homepage {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+  background-color: #fafafa;
+}
+
+.home-sign {
+  box-shadow: 0 0 2px grey;
+  background-color: white;
+}
+
+#banner {
+  height: 400px;
+}
+
+#home-logo {
+  display: flex;
+  justify-content: center;
+}
+
+#logo-letters {
+  height: 60px;
+  margin-top: 32px;
+}

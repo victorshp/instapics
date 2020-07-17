@@ -1,7 +1,8 @@
-<%= render "shared/navbar" %>
+ <%= render "shared/navbar" %>
 
 <div class="container">
   <% @pics.each do |pic| %>
+    <%= cl_image_tag pic.photo.key, width: 610, crop: :fill %>
     <h1><%= link_to pic.title, pic_path(pic) %></h1>
     <hr>
   <% end %>
