@@ -42,6 +42,8 @@ gem 'font-awesome-sass'
 gem 'dotenv-rails', groups: [:development, :test]
 
 gem 'cloudinary'
+# Use acts-as-votable to allow liking a post
+gem 'acts_as_votable', '~> 0.12.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
