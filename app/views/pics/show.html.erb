@@ -13,7 +13,9 @@
   <div class="interaction-row">
     <div class="interaction-buttons">
       <div class="interactive-clicks">
-        <i class="far fa-heart" id="interaction-heart"></i>
+        <%= link_to like_pic_path(@pic), method: :put do %>
+          <i class="far fa-heart" id="interaction-heart"></i>
+        <% end %>
         <i class="far fa-comments" id="interaction-comment"></i>
       </div>
       <div class="edit-clicks">
