@@ -28,20 +28,20 @@ gem 'jbuilder', '~> 2.7'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
-# Simple form
-gem 'simple_form'
-# Bootstrap in SASS
-gem 'bootstrap-sass'
-gem 'bootstrap'
-
-gem 'devise'
-
-gem 'font-awesome-sass'
-
+# Use Simple Form to simplify forms writing
+gem 'simple_form', '~> 5.0.3'
+# Use Bootstrap in SASS
+gem 'bootstrap-sass', '~> 3.4.1'
+# Use Bootstrap for CSS libraries
+gem 'bootstrap', '~> 4.5.2'
+# Use Devise for user authentication
+gem 'devise', '~> 4.7.3'
+# Use FontAwesome as a CSS Library for icons
+gem 'font-awesome-sass', '~> 5.13.0'
 # Keep the secret keys unshared on GitHub
-gem 'dotenv-rails', groups: [:development, :test]
-
-gem 'cloudinary'
+gem 'dotenv-rails', '~> 2.7.6' ,groups: [:development, :test]
+# Use Cloudinary as an image management service
+gem 'cloudinary', '~> 1.18.1'
 # Use acts-as-votable to allow liking a post
 gem 'acts_as_votable', '~> 0.12.1'
 

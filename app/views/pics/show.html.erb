@@ -15,6 +15,7 @@
       <div class="interactive-clicks">
         <%= link_to like_pic_path(@pic), method: :put do %>
           <i class="far fa-heart" id="interaction-heart"></i>
+          <%= @pic.get_upvotes.size %>
         <% end %>
         <i class="far fa-comments" id="interaction-comment"></i>
       </div>
