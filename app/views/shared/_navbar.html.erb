@@ -25,6 +25,7 @@
         <a class="dropdown-btn"><i class="fas fa-user-circle fa-lg"></i></a>
         <div class="dropdown-content">
           <%= link_to "Profile", "/profile", class: "dropdown-item" %>
+          <%= link_to "Settings", edit_user_registration_path, class: "dropdown-item" %>
           <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
         </div>
       </div>
