@@ -1,6 +1,6 @@
 
 <div class="container">
-  <h2>Login</h2>
+  <h2 class="devise-headings">Login</h2>
   
   <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="form-inputs">
@@ -19,7 +19,7 @@
     </div>
 
     <div class="form-actions">
-      <%= f.button :submit, "Log in" %>
+      <%= f.button :submit, "Log in", class: "btn btn-primary" %>
     </div>
   <% end %>
 
