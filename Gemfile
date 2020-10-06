@@ -34,6 +34,8 @@ gem 'simple_form', '~> 5.0.3'
 gem 'bootstrap-sass', '~> 3.4.1'
 # Use Bootstrap for CSS libraries
 gem 'bootstrap', '~> 4.5.2'
+# Use Jquery-Rails for Bootstrap support
+gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 # Use Devise for user authentication
 gem 'devise', '~> 4.7.3'
 # Use FontAwesome as a CSS Library for icons
