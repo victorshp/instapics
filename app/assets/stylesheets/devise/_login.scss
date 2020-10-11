@@ -9,6 +9,10 @@
   align-items: baseline;
 }
 
-.panel-footer h3 {
+.panel-footer h3, .form-actions {
   padding-bottom: 16px;
+}
+
+.member-me {
+  margin-left: 5px;
 }
