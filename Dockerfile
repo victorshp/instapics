@@ -1,29 +1,21 @@
-FROM ruby 2.6.6
+FROM ruby:2.6.5-slim-stretch
 
 # Install essential Linux packages
 RUN apt-get update
-RUN apt-get install -y --no-install-recommends \
-build-essential \
-npm \
-libpq-dev \
-nodejs \
-postgresql-client \
-
-# Set path
-ENV RAILS_ROOT /instapics
+RUN apt-get install -y nodejs postgresql-client
 
 # Make the directory
-RUN mkdir -p $RAILS_ROOT
+RUN mkdir /instapics
 
 # Establish working directory (where the commands will be run)
-WORKDIR $RAILS_ROOT
+WORKDIR /instapics
 
 # Install bundler
 RUN gem install bundler
 
 # USe Gemfiles as Docker cache markers. Alway bundle before coppying the app soruce.
-COPY Gemfile Gemfile
-COPY Gemfile.lock Gemfile.lock
+COPY Gemfile /instapics/Gemfile
+COPY Gemfile.lock /instapics/Gemfile.lock
 
 # Sets the Gems path
 RUN bundle install
