@@ -2,7 +2,6 @@ FROM ruby:2.6.5-slim-stretch
 
 # Install essential Linux packages
 RUN apt-get update
-RUN apt-get install -y nodejs postgresql-client
 
 # Make the directory
 RUN mkdir /instapics
