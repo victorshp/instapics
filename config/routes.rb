@@ -8,7 +8,5 @@ Rails.application.routes.draw do
       put "like", to: "pics#upvote"
     end
   end
-
-  get "/chat" to "home#chat"
-
+  
 end
