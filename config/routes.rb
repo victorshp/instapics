@@ -8,5 +8,6 @@ Rails.application.routes.draw do
       put "like", to: "pics#upvote"
     end
   end
-  
+ 
+  resources :chatrooms, only: :show 
 end
