@@ -6,6 +6,7 @@
 //= require jquery
 //= require bootstrap-sprockets
 
+import initChatroomCable from "../channels/chatroom_channel.js";
 import 'bootstrap';
 
 require("@rails/ujs").start()
